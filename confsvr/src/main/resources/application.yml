@@ -1,0 +1,22 @@
+#A configuration service that uses a git-based repository to read the files from
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        encrypt.enabled: false
+        git:
+          uri: https://github.com/bilalwahla/config-repo/
+          searchPaths: licensingservice,organizationservice,zuulservice
+          username: microservices
+          password: th3y4r3c0mpl3x
+
+#Setting logging levels
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.df: DEBUG
