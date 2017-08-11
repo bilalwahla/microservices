@@ -32,3 +32,4 @@ script:
 - sh travis_scripts/build_services.sh
 - sh travis_scripts/deploy_to_docker_hub.sh
 - sh travis_scripts/deploy_to_amazon_ecs.sh
+
