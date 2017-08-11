@@ -6,7 +6,7 @@
 
   <groupId>com.df</groupId>
   <artifactId>zipkinsvr</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>Zipkin Server</name>
@@ -59,7 +59,7 @@
     <start-class>com.df.zipkinsvr.ZipkinServerApplication</start-class>
     <java.version>1.8</java.version>
     <docker.image.name>bilalwahla/df-zipkinsvr</docker.image.name>
-    <docker.image.tag>${env.BUILD_NAME}</docker.image.tag>
+    <docker.image.tag>${project.version}</docker.image.tag>
   </properties>
 
   <build>
