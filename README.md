@@ -27,13 +27,6 @@ Separating concerns and implementing them as microservices still leaves us with 
 
 Setting up a Zuul server is again, as you would expect from Spring, as simple as adding dependencies to the class path and an @EnableZuulProxy annotation on the main class, and your services gateway service is ready to go. Of course, there are configurations that you need to apply should you wish for additional functionality and/or customize how you wish certain things to behave, e.g. you could make it look up services using the discovery service either by their default service IDs, or you can define mapping against those service IDs, maybe to make URLs to your services gateway simpler and/or smaller.
 
-Basic useful feature list:
-
- * Ctrl+S / Cmd+S to save the file
- * Ctrl+Shift+S / Cmd+Shift+S to choose to save as Markdown or HTML
- * Drag and drop a file into here to load it
- * File contents are saved in the URL so you can share files
-
 ## Client Resiliency Patterns
 
 Various microservices talking to each other through well-implemented routing patterns is well and good, but often have I seen a service client falling apart due to a fault not of its own, but of the service itself, e.g. the service gradually degraded, started performing badly, and made the service client perform badly, subsequently bringing the entire application down. Client resiliency should act as a protection layer between the service client and the service. There are various patterns that should be implemented to make the service clients resilient, a few of which are mentioned below:
